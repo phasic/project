@@ -24,7 +24,8 @@
         </c:forEach>
         <c:forEach var="onkost" items="{requestScope.onkosten}">
             <div class="table table-striped row">
-                <div class="col-sm-1">
+                
+<!--                <div class="col-sm-1">
                     ${onkost.onkostnr}
                 </div>
                 <div class="col-sm-1">
@@ -44,7 +45,7 @@
                 </div>
                 <div class="col-sm-1">
                     ${onkost.kredietnr}
-                </div>
+                </div>-->
             </div>           
             <div class="col-sm-1">
                 <form method="POST" action="Controller">
@@ -62,6 +63,13 @@
 
         
      
+        
+        <%--<c:forEach var="krediet" items="${requestScope.kredieten}">--%>
+        <!--<ul>-->
+              <!--${krediet.saldo}-->
+        <!--</ul>-->
+        <%--</c:forEach>--%>
+       
         
         
         
