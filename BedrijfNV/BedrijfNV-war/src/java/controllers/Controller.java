@@ -44,6 +44,7 @@ public class Controller extends HttpServlet {
         
         //Alle navigatie die naar start gaat
        if ((navigatie == null) || navigatie.equals("naarStart")) {
+            request.setAttribute("wiebenik", "000");
             request.setAttribute("onkosten", localbean.getOnkosten());
             this.goToPage("start.jsp", request, response);
         }
