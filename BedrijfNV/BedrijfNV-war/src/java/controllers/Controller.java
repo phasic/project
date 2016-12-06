@@ -50,6 +50,7 @@ public class Controller extends HttpServlet {
         }
           
         if (navigatie.equals("naarVerwijderenOnkost")) {    //onkost uit databank verwijderen, enkel onkost in aanmaak kan verwijderd worden
+            request.setAttribute("wiebenik", "000");
             request.setAttribute("onkosten", localbean.getOnkosten());
             this.goToPage("verwijderenonkost.jsp", request, response);
         }
@@ -92,6 +93,12 @@ public class Controller extends HttpServlet {
         if (navigatie.equals("naarOverzichtAlleKredieten")){
             this.goToPage("overzichtallekredieten.jsp", request, response);
         }
+        
+        ///Alle navigatie naar index dummy
+        if (navigatie.equals("naarIndex")){
+            this.goToPage("index.jsp", request, response);
+        }
+        
         
         else{
             this.goToPage("start.jsp", request, response);
